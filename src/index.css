@@ -1,7 +1,46 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@theme {
+  --color-sidebar-bg: hsla(0, 0%, 100%, 0.02);
+  --color-primary: hsla(37, 47%, 66%, 1);
+  --color-foreground: hsla(270, 3%, 95%, 1);
+  --color-muted-foreground: hsla(0, 0%, 100%, 0.75);
+  --color-accent: hsla(44, 38%, 87%, 1);
+  --color-background: hsla(255, 57%, 3%, 1);
+
+  --border-gradient: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  --triple-input-shadow: -1px -1px 0px 0px hsla(0, 0%, 100%, 0.05) inset,
+    1px 1px 0px 0px hsla(0, 0%, 100%, 0.1) inset,
+    0px 0px 0px 0px hsla(0, 0%, 100%, 0.25) inset;
+
+  --triple-button-shadow: 2px 2px 0px 0px hsla(0, 0%, 100%, 0.1) inset,
+    0px 0px 0px 0px hsla(0, 0%, 100%, 0.25) inset,
+    -2px -2px 0px 0px hsla(0, 0%, 100%, 0.05) inset;
+}
+
+@layer utilities {
+  .border-gradient {
+    border-image-source: var(--border-gradient);
+    border-image-slice: 1;
+  }
+
+  .input-shadow-border {
+    box-shadow: var(--triple-input-shadow);
+    backdrop-filter: blur(2px);
+  }
+
+  .button-shadow-border {
+    box-shadow: var(--triple-button-shadow);
+    backdrop-filter: blur(2px);
+  }
+
+  :root {
+    background-color: var(--color-background);
+  }
 }
