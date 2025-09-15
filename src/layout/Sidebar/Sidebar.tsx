@@ -1,10 +1,10 @@
 import logo from "../../assets/logo.svg";
 import toggle from "../../assets/icons/Sidebar.svg";
-import { Button } from "../../components/Button";
 import { Navigation } from "./Navigation";
 import { Conversations } from "./Conversations";
 import { SearchBar } from "./SearchBar";
 import { AuthSection } from "./AuthSection";
+import { Button } from "@/components/ui/button";
 
 export const Sidebar = () => {
   return (
@@ -21,7 +21,7 @@ export const Sidebar = () => {
                 <p className="text-sm text-[10px]">by Deepshi Ai</p>
               </div>
             </div>
-            <Button variant="ghost">
+            <Button variant="ghost" className="p-0 h-fit">
               <img src={toggle} alt="toggle" />
             </Button>
           </div>

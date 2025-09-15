@@ -1,13 +1,12 @@
-import { Button } from "../../components/Button";
 import { Add, SearchNormal } from "iconsax-reactjs";
-import { Input } from "../../components/Input";
+import { Input } from "../../components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export const SearchBar = () => {
   return (
     <div className="flex items-center gap-2">
       <Button
-        variant="accent"
-        className="w-[42px] h-[42px] shrink-0 justify-center"
+        className="w-[42px] h-[42px] text-background !p-0 flex "
       >
         <Add size={24} />
       </Button>

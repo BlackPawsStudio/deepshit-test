@@ -7,8 +7,8 @@ import {
   messagesSquare,
   user,
 } from "../../assets/icons/sidebar";
-import { Button } from "../../components/Button";
 import { cn } from "../../lib/utils";
+import { Button } from "@/components/ui/button";
 
 interface SidebarNavigationItem {
   icon: string;
@@ -64,7 +64,7 @@ export const Navigation = () => {
           variant="ghost"
           onClick={() => handleItemClick(item.label)}
           className={cn(
-            "w-full px-3 py-2.5 justify-start gap-3 transition-all duration-200",
+            "w-full px-3 py-2.5 justify-start gap-3 transition-all duration-200 h-fit",
             activeItem === item.label && "button-shadow-border"
           )}
         >

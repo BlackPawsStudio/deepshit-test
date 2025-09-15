@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
   --color-sidebar-bg: hsla(0, 0%, 100%, 0.02);

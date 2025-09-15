@@ -1,4 +1,4 @@
-import { Button } from "../../components/Button";
+import { Button } from "@/components/ui/button";
 
 const isSignedIn = true;
 
@@ -20,13 +20,10 @@ export const AuthSection = () => {
   }
   return (
     <div className="flex flex-col gap-2">
-      <Button
-        variant="accent"
-        className="bg-white text-background justify-center py-3"
-      >
+      <Button className="bg-white text-background justify-center py-3 h-fit">
         Get started
       </Button>
-      <Button variant="outline" className="justify-center py-3">
+      <Button variant="outline" className="justify-center py-3 h-fit">
         Sign In
       </Button>
     </div>
