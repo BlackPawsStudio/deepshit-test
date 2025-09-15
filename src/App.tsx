@@ -14,16 +14,16 @@ const App = () => {
             <Route path="/" element={<Chat />} />
           </Routes>
         </main>
-        <div className="absolute top-0 left-0 -z-10 bg-background w-full h-full">
+        <div className="absolute top-0 left-0 -z-10 bg-background w-screen h-full">
           <img
             src={miniStars}
             alt=""
-            className="absolute top-0 left-0 opacity-50"
+            className="absolute left-0 opacity-50 w-screen top-1/2 -translate-y-1/2"
           />
           <img
             src={galaxy2}
             alt=""
-            className="absolute top-0 left-0 mix-blend-luminosity"
+            className="absolute left-0 mix-blend-luminosity w-screen top-1/2 -translate-y-1/2"
           />
         </div>
       </div>
