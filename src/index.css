@@ -2,8 +2,9 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-sidebar-bg: hsla(0, 0%, 100%, 0.02);
   --color-primary: hsla(37, 47%, 66%, 1);
+  --color-light-gold: hsla(44, 38%, 87%, 1);
+  --color-sidebar-bg: hsla(0, 0%, 100%, 0.02);
   --color-foreground: hsla(270, 3%, 95%, 1);
   --color-muted-foreground: hsla(0, 0%, 100%, 0.75);
   --color-accent: hsla(44, 38%, 87%, 1);
@@ -23,6 +24,17 @@
   --triple-button-shadow: 2px 2px 0px 0px hsla(0, 0%, 100%, 0.1) inset,
     0px 0px 0px 0px hsla(0, 0%, 100%, 0.25) inset,
     -2px -2px 0px 0px hsla(0, 0%, 100%, 0.05) inset;
+
+  --fade-right-mask: linear-gradient(
+    to right,
+    black 0%,
+    black 50%,
+    transparent 100%
+  );
+
+  --triple-textarea-shadow: 2px 2px 0px 0px hsla(0, 0%, 100%, 0.1) inset,
+    0px 0px 0px 0px hsla(0, 0%, 100%, 0.25) inset,
+    -2px -2px 0px 0px hsla(0, 0%, 100%, 0.05) inset;
 }
 
 @layer utilities {
@@ -38,6 +50,16 @@
 
   .button-shadow-border {
     box-shadow: var(--triple-button-shadow);
+    backdrop-filter: blur(2px);
+  }
+
+  .fade-right {
+    mask-image: var(--fade-right-mask);
+    -webkit-mask-image: var(--fade-right-mask);
+  }
+
+  .textarea-shadow-border {
+    box-shadow: var(--triple-textarea-shadow);
     backdrop-filter: blur(2px);
   }
 
